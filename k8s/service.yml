@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: okswd
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "okswd"
+    port: 8080
+  selector:
+    app: okswd
